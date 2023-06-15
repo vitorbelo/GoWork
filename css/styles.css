@@ -1,0 +1,254 @@
+/* styles.css */
+
+/* Reset de estilos */
+body {
+  font-family: 'Inter', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Cabeçalho */
+header {
+  background-color: #3787EB;
+  color: #fff;
+  padding: 20px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  width: 70px;
+  margin-right: 30px;
+}
+
+.logo h1 {
+  font-size: 20px;
+  margin: 0;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu {
+  list-style-type: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  gap: 30px;
+  font-size: 14px;
+}
+
+.menu li {
+  margin-left: 15px;
+}
+
+.menu li:first-child {
+  margin-left: 0;
+}
+
+.menu a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Menu responsivo */
+@media screen and (max-width: 768px) {
+  .logo h1 {
+    font-size: 18px;
+  }
+
+  .menu {
+    display: none;
+  }
+
+  .menu.active {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    background-color: #3787EB;
+    padding: 10px;
+    border-radius: 4px;
+  }
+
+  .menu.active li {
+    margin: 10px 0;
+  }
+
+  .menu.active a {
+    color: #fff;
+  }
+
+  .menu-toggle {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+  }
+}
+
+/* Seção de busca de empregos */
+#search-jobs {
+  padding: 20px;
+}
+
+#search-jobs h2 {
+  text-align: center;
+  color: #5e5e5e;
+}
+
+.search-container {
+  display: flex;
+  justify-content: center;
+}
+
+.search-input {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-radius: 20px;
+  border: none;
+  width: 300px;
+  margin: 0 10px;
+  font-size: 14px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.search-input i {
+  margin-right: 10px;
+}
+
+.search-input input {
+  flex: 1;
+  border: none;
+  background: transparent;
+}
+
+.search-input input::placeholder {
+  color: #999;
+}
+
+.search-input input:focus {
+  outline: none;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+#search-button {
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: none;
+  background-color: #3787EB;
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+}
+
+#search-button:hover {
+  background-color: #295992;
+}
+
+#search-button i {
+  margin-right: 5px;
+}
+
+#search-button span {
+  font-weight: bold;
+}
+
+/* Seção de avaliações de empresas */
+#company-reviews {
+  padding: 0 20px;
+}
+
+#company-reviews h2 {
+  color: #5e5e5e;
+  text-align: center;
+}
+
+.company-reviews-container {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px;
+}
+
+/* Responsividade para a seção de avaliações de empresas */
+@media screen and (max-width: 768px) {
+  .company-reviews-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+.company-review {
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+}
+
+.company-info img {
+  width: 60px;
+  height: 60px;
+  margin-right: 20px;
+  border-radius: 50%;
+}
+
+.company-info h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.rating {
+  color: #ffcc00;
+  margin-bottom: 10px;
+}
+
+.rating i {
+  margin-right: 4px;
+}
+
+/* Rodapé */
+footer {
+  background-color: #F5F6F7;
+  padding: 20px;
+  text-align: center;
+  font-size: 14px;
+  color: #666;
+}
+
+.footer-links {
+  margin-top: 10px;
+}
+
+.footer-links a {
+  color: #3787EB;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  margin-top: 20px;
+  color: #999;
+}
+
+.footer-bottom p {
+  margin: 0;
+  font-size: 12px;
+}
